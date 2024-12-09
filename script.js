@@ -30,3 +30,18 @@ function decryptText() {
         alert('Decryption failed. Please check the secret key and encrypted text.');
     }
 }
+
+// For hide and view the secret key
+document.getElementById('toggleSecretKey').addEventListener('click', function () {
+    const secretKeyInput = document.getElementById('secretKey');
+    const toggleIcon = this;
+
+    if (secretKeyInput.type === 'password') {
+        secretKeyInput.type = 'text';
+        toggleIcon.textContent = '👁️'; 
+    } else {
+        secretKeyInput.type = 'password';
+        toggleIcon.textContent = '🙈'; 
+    }
+});
+

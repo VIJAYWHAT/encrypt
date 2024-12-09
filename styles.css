@@ -4,9 +4,21 @@ body {
     padding: 20px;
 }
 
-textarea, input {
+h1 {
+    text-align: center;
+}
+
+textarea {
     width: 100%;
     padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    padding-right: 30px;
     margin: 5px 0;
     box-sizing: border-box;
 }
@@ -32,4 +44,17 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Secret key */
+
+input[type="password"] {
+    padding-right: 30px;
+}
+
+#toggleSecretKey {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
 }
