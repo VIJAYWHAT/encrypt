@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Encryption Page</h1>
+    <form id="encryptionForm">
+        <label for="plainText">Plain Text:</label>
+        <textarea id="plainText" placeholder="Enter plain text"></textarea><br><br>
+        
+        <label for="secretKey">Secret Key:</label>
+        <input type="text" id="secretKey" placeholder="Enter secret key"><br><br>
+        
+        <button type="button" onclick="encryptText()">Encrypt</button>
+    </form>
+    
+    <h2>Encrypted Text:</h2>
+    <textarea id="encryptedText" readonly></textarea><br><br>
+    
+    <a href="decrypt.html">Go to Decryption Page</a>
+    
+    <script src="crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
