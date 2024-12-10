@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Decryption</h1>
+    <h1>Decryption Page</h1>
     <form id="decryptionForm">
         <label for="encryptedTextInput">Encrypted Text:</label>
         <textarea id="encryptedTextInput" placeholder="Enter encrypted text"></textarea><br><br>
         
-        <label for="secretKey">Secret Key:</label>
+        <label for="secretKeyDecrypt">Secret Key:</label>
         <div style="position: relative; display: inline-block; width: 100%;">
-            <input type="password" id="secretKey" placeholder="Enter secret key" autocomplete="off">
+            <input type="password" id="secretKey" placeholder="Enter secret key" autocomplete="off" style="width: 95%; padding-right: 30px;">
             <span id="toggleSecretKey" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;">🙈</span>
         </div><br><br>
-
-        
+                
         <button type="button" onclick="decryptText()">Decrypt</button>
     </form>
     

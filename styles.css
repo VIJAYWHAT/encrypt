@@ -4,24 +4,13 @@ body {
     padding: 20px;
 }
 
-h1 {
-    text-align: center;
-}
-
-textarea {
+textarea, input {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     box-sizing: border-box;
 }
 
-input {
-    width: 95%;
-    padding: 10px;
-    padding-right: 30px;
-    margin: 5px 0;
-    box-sizing: border-box;
-}
 
 button {
     padding: 10px 20px;
@@ -45,8 +34,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-/* Secret key */
 
 input[type="password"] {
     padding-right: 30px;

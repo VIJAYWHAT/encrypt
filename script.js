@@ -13,7 +13,7 @@ function encryptText() {
 
 function decryptText() {
     const encryptedText = document.getElementById('encryptedTextInput').value;
-    const secretKey = document.getElementById('secretKeyDecrypt').value;
+    const secretKey = document.getElementById('secretKey').value;
 
     if (!encryptedText || !secretKey) {
         alert('Please provide both encrypted text and secret key.');
@@ -31,7 +31,7 @@ function decryptText() {
     }
 }
 
-// For hide and view the secret key
+// Hide and show the secret key
 document.getElementById('toggleSecretKey').addEventListener('click', function () {
     const secretKeyInput = document.getElementById('secretKey');
     const toggleIcon = this;
@@ -44,4 +44,3 @@ document.getElementById('toggleSecretKey').addEventListener('click', function ()
         toggleIcon.textContent = '🙈'; 
     }
 });
-
