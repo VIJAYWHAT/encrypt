@@ -1,12 +1,10 @@
 function encryptText() {
     const plainText = document.getElementById('plainText').value;
     const secretKey = document.getElementById('secretKey').value;
-
     if (!plainText || !secretKey) {
         alert('Please provide both plain text and secret key.');
         return;
     }
-
     const encrypted = CryptoJS.AES.encrypt(plainText, secretKey).toString();
     document.getElementById('encryptedText').value = encrypted;
 }
@@ -14,12 +12,10 @@ function encryptText() {
 function decryptText() {
     const encryptedText = document.getElementById('encryptedTextInput').value;
     const secretKey = document.getElementById('secretKey').value;
-
     if (!encryptedText || !secretKey) {
         alert('Please provide both encrypted text and secret key.');
         return;
     }
-
     try {
         const decrypted = CryptoJS.AES.decrypt(encryptedText, secretKey).toString(CryptoJS.enc.Utf8);
         if (!decrypted) {
@@ -66,7 +62,6 @@ document.getElementById('copyButton').addEventListener('click', function () {
         showSnackbar("Decrypted text copied!");
     });
 });
-
 
 // Function to display the snackbar
 function showSnackbar(message) {
