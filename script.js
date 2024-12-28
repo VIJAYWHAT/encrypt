@@ -45,12 +45,11 @@ document.getElementById('toggleSecretKey').addEventListener('click', function ()
     }
 });
 
-// Copy encrypted text to clipboard
 document.getElementById('copyButton').addEventListener('click', function () {
     const encryptedText = document.getElementById('encryptedText');
     encryptedText.select();
     navigator.clipboard.writeText(encryptedText.value).then(() => {
-        alert("Encrypted text copied!");
+        showSnackbar("Encrypted text copied!");
     });
 });
 
@@ -59,6 +58,19 @@ document.getElementById('copyButton').addEventListener('click', function () {
     const encryptedText = document.getElementById('decryptedText');
     encryptedText.select();
     navigator.clipboard.writeText(encryptedText.value).then(() => {
-        alert("Decrypted text copied!");
+        showSnackbar("Decrypted text copied!");
     });
 });
+
+
+// Function to display the snackbar
+function showSnackbar(message) {
+    const snackbar = document.getElementById('snackbar');
+    snackbar.textContent = message;
+    snackbar.className = "show";
+
+    // Hide the snackbar after 3 seconds
+    setTimeout(() => {
+        snackbar.className = snackbar.className.replace("show", "");
+    }, 3000);
+}
