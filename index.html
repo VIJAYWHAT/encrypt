@@ -11,18 +11,22 @@
     <form id="encryptionForm">
         <label for="plainText">Plain Text:</label>
         <textarea id="plainText" placeholder="Enter plain text"></textarea><br><br>
-        
+
         <label for="secretKey">Secret Key:</label>
         <div style="position: relative; display: inline-block; width: 100%;">
             <input type="password" id="secretKey" placeholder="Enter secret key" autocomplete="off" style="width: 95%; padding-right: 30px;">
-            <span id="toggleSecretKey" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;">🙈</span>
+            <span id="toggleSecretKey" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁️</span>
         </div><br><br>
-        
-        <button type="button" onclick="encryptText()">Encrypt</button>
+
+        <button type="button" onclick="encryptText()">Encrypt</button><br><br>
     </form>
     
-    <h2>Encrypted Text:</h2>
-    <textarea id="encryptedText" readonly></textarea><br><br>
+    <label for="encryptedText">Encrypted Text:</label>
+
+    <div style="position: relative; display: inline-block; width: 100%;">
+        <input type="text" id="encryptedText" readonly>
+        <span id="copyButton" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;">📋</span>
+    </div><br><br>
     
     <a href="decrypt.html">Go to Decryption Page</a>
     

@@ -44,3 +44,21 @@ document.getElementById('toggleSecretKey').addEventListener('click', function ()
         toggleIcon.textContent = '🙈'; 
     }
 });
+
+// Copy encrypted text to clipboard
+document.getElementById('copyButton').addEventListener('click', function () {
+    const encryptedText = document.getElementById('encryptedText');
+    encryptedText.select();
+    navigator.clipboard.writeText(encryptedText.value).then(() => {
+        alert("Encrypted text copied!");
+    });
+});
+
+// Copy decrypted text to clipboard
+document.getElementById('copyButton').addEventListener('click', function () {
+    const encryptedText = document.getElementById('decryptedText');
+    encryptedText.select();
+    navigator.clipboard.writeText(encryptedText.value).then(() => {
+        alert("Decrypted text copied!");
+    });
+});

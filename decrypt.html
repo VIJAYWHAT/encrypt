@@ -22,8 +22,11 @@
     </form>
     
     <h2>Decrypted Text:</h2>
-    <textarea id="decryptedText" readonly></textarea><br><br>
     
+    <div style="position: relative; display: inline-block; width: 100%;">
+        <input type="text" id="decryptedText" readonly>
+        <span id="copyButton" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;">📋</span>
+    </div><br><br>
     <a href="index.html">Go to Encryption Page</a>
     
     <script src="crypto-js.min.js"></script>
