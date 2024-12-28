@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Encryption Page</h1>
+    <h1>Encryption</h1>
     <form id="encryptionForm">
         <label for="plainText">Plain Text:</label>
         <textarea id="plainText" placeholder="Enter plain text"></textarea><br><br>
@@ -18,10 +18,10 @@
             <span id="toggleSecretKey" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁️</span>
         </div><br><br>
 
-        <button type="button" onclick="encryptText()">Encrypt</button><br><br>
+        <button type="button" onclick="encryptText()">Encrypt</button>
     </form>
     
-    <label for="encryptedText">Encrypted Text:</label>
+    <h2>Encrypted Text:</h2>
 
     <div style="position: relative; display: inline-block; width: 100%;">
         <input type="text" id="encryptedText" readonly>
