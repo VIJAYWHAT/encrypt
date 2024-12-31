@@ -26,6 +26,9 @@ function decryptText() {
             throw new Error();
         }
         document.getElementById('decryptedText').value = decrypted;
+        
+        // Clear the secret key field after decryption
+        document.getElementById('secretKey').value = '';
     } catch {
         alert('Decryption failed. Please check the secret key and encrypted text.');
     }
