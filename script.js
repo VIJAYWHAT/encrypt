@@ -45,6 +45,8 @@ document.getElementById('toggleSecretKey').addEventListener('click', function ()
     }
 });
 
+
+// Copy Encrypted text to clipboard
 document.getElementById('copyButton').addEventListener('click', function () {
     const encryptedText = document.getElementById('encryptedText');
     encryptedText.select();
