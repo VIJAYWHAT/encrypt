@@ -43,11 +43,29 @@ input[type="password"] {
     padding-right: 30px;
 }
 
+.textBox {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
 #toggleSecretKey {
     font-size: 18px;
     color: #333;
     cursor: pointer;
     user-select: none;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#copyButton {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 /* Snack bar message */
