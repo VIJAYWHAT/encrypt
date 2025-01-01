@@ -1,12 +1,17 @@
+// Function to encrypt the plain text using AES encryption
 function encryptText() {
-    const plainText = document.getElementById('plainText').value;
-    const secretKey = document.getElementById('secretKey').value;
+    const plainText = document.getElementById('plainText').value; // Get plain text input
+    const secretKey = document.getElementById('secretKey').value; // Get secret key input
+
+    // Validate if inputs are provided
     if (!plainText || !secretKey) {
         alert('Please provide both plain text and secret key.');
         return;
     }
+
+    // Encrypt the plain text using the secret key
     const encrypted = CryptoJS.AES.encrypt(plainText, secretKey).toString();
-    document.getElementById('encryptedText').value = encrypted;
+    document.getElementById('encryptedText').value = encrypted; // Display encrypted text
 }
 
 function decryptText() {
