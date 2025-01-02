@@ -14,19 +14,22 @@ function encryptText() {
     document.getElementById('encryptedText').value = encrypted; // Display encrypted text
 }
 
+// Function to decrypt the encrypted text using AES decryption
 function decryptText() {
-    const encryptedText = document.getElementById('encryptedTextInput').value;
-    const secretKey = document.getElementById('secretKey').value;
+    const encryptedText = document.getElementById('encryptedTextInput').value; // Get encrypted text input
+    const secretKey = document.getElementById('secretKey').value; // Get secret key input
+
+    // Validate if inputs are provided
     if (!encryptedText || !secretKey) {
         alert('Please provide both encrypted text and secret key.');
         return;
     }
+
     try {
+        // Decrypt the text using the secret key
         const decrypted = CryptoJS.AES.decrypt(encryptedText, secretKey).toString(CryptoJS.enc.Utf8);
-        if (!decrypted) {
-            throw new Error();
-        }
-        document.getElementById('decryptedText').value = decrypted;
+        if (!decrypted) throw new Error(); // Handle incorrect decryption
+        document.getElementById('decryptedText').value = decrypted; // Display decrypted text
         
         // Clear the secret key field after decryption
         document.getElementById('secretKey').value = '';
