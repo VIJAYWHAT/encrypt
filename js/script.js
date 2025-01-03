@@ -38,17 +38,18 @@ function decryptText() {
     }
 }
 
-// Hide and show the secret key
+// Toggle visibility of the secret key input
 document.getElementById('toggleSecretKey').addEventListener('click', function () {
     const secretKeyInput = document.getElementById('secretKey');
     const toggleIcon = this;
 
+    // Toggle between password and text input types
     if (secretKeyInput.type === 'password') {
         secretKeyInput.type = 'text';
-        toggleIcon.textContent = '👁️'; 
+        toggleIcon.textContent = '👁️'; // Show eye icon when visible
     } else {
         secretKeyInput.type = 'password';
-        toggleIcon.textContent = '🙈'; 
+        toggleIcon.textContent = '🙈'; // Show closed eye icon when hidden
     }
 });
 
