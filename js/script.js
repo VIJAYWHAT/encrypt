@@ -72,11 +72,11 @@ document.getElementById('copyButton').addEventListener('click', function () {
     });
 });
 
-// Function to display the snackbar
+// Display feedback message using snackbar
 function showSnackbar(message) {
     const snackbar = document.getElementById('snackbar');
-    snackbar.textContent = message;
-    snackbar.className = "show";
+    snackbar.textContent = message; // Set the message
+    snackbar.className = "show"; // Show the snackbar
 
     // Hide the snackbar after 3 seconds
     setTimeout(() => {
