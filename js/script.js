@@ -83,3 +83,11 @@ function showSnackbar(message) {
         snackbar.className = snackbar.className.replace("show", "");
     }, 3000);
 }
+
+// Enable Enter key to trigger encryption
+document.getElementById('encryptionForm').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();  // Prevent form submission
+        encryptText();           // Trigger encryption
+    }
+});
