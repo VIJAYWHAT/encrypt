@@ -91,3 +91,4 @@ document.getElementById('encryptionForm').addEventListener('keydown', function(e
         encryptText();           // Trigger encryption
     }
 });
+
