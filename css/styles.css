@@ -1,98 +1,101 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-}
-
-h1 {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+label {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
 }
 textarea, input {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-}
-
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 12px;
     border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 1em;
+    outline: none;
+}
+.textBox {
+    position: relative;
+}
+button {
+    width: 100%;
+    padding: 15px;
+    background: #ff7eb3;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #fff;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-
 button:hover {
-    background-color: #45a049;
+    background: #ff5678;
 }
-
+#toggleSecretKey, #copyButton {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+}
 a {
-    display: inline-block;
+    display: block;
     margin-top: 20px;
-    color: #007BFF;
+    color: #ffde59;
     text-decoration: none;
+    font-size: 1.1em;
 }
-
 a:hover {
     text-decoration: underline;
 }
-
-/* Hide and show secret key */
-input[type="password"] {
-    padding-right: 30px;
-}
-
-.textBox {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-#toggleSecretKey {
-    font-size: 18px;
-    color: #333;
-    cursor: pointer;
-    user-select: none;
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#copyButton {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-/* Snack bar message */
 #snackbar {
-    visibility: hidden; /* Hidden by default */
+    visibility: hidden;
     min-width: 250px;
-    margin-left: -125px; /* Center the snackbar */
-    background-color: #333;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 16px;
     position: fixed;
     z-index: 1;
     left: 50%;
-    bottom: 30px; /* Position at the bottom of the page */
+    bottom: 32px;
     font-size: 17px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInOut 2s;
 }
-
 #snackbar.show {
-    visibility: visible; /* Show the snackbar */
-    animation: fadeInOut 3s; /* Fade in and out animation */
+    visibility: visible;
 }
-
 @keyframes fadeInOut {
     0%, 80% { opacity: 1; }
     100% { opacity: 0; }
 }
-

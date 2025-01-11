@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Decryption</h1>
-    <form id="decryptionForm">
-        <label for="encryptedTextInput">Encrypted Text:</label>
-        <textarea id="encryptedTextInput" placeholder="Enter encrypted text"></textarea><br><br>
-        
-        <label for="secretKeyDecrypt">Secret Key:</label>
+    <div class="container">
+        <h1>Decryption</h1>
+        <form id="decryptionForm">
+            <label for="encryptedTextInput">Encrypted Text </label>
+            <textarea id="encryptedTextInput" placeholder="Enter encrypted text"></textarea>
+
+            <label for="secretKeyDecrypt">Secret Key</label>
+            <div class="textBox">
+                <input type="password" id="secretKey" placeholder="Enter secret key" autocomplete="off">
+                <span id="toggleSecretKey">🙈</span>
+            </div>
+            <button type="button" onclick="decryptText()">Decrypt</button>
+        </form>
+        <h2>Decrypted Text</h2>
         <div class="textBox">
-            <input type="password" id="secretKey" placeholder="Enter secret key" autocomplete="off">
-            <span id="toggleSecretKey">🙈</span>
-        </div><br><br>
-                
-        <button type="button" onclick="decryptText()">Decrypt</button>
-    </form>
-    
-    <h2>Decrypted Text:</h2>
-    <div class="textBox">
-        <input type="text" id="decryptedText" readonly>
-        <span id="copyButton">📋</span>
-    </div><br><br>
-    <div id="snackbar"></div>
-    <a href="index.html">Go to Encryption Page</a>
+            <input type="text" id="decryptedText">
+            <span id="copyButton">📋</span>
+        </div>
+        <div id="snackbar">Copied to clipboard</div>
+        <a href="index.html">Go to Decryption Page</a>
+    </div>
     
     <script src="js/crypto-js.min.js"></script>
     <script src="js/script.js"></script>
