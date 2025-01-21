@@ -12,13 +12,13 @@ body {
 }
 .container {
     background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     width: 100%;
     backdrop-filter: blur(10px);
-    margin: 0 10px
+    margin: 0 10px;
 }
 h1 {
     font-size: 2em;
@@ -28,6 +28,8 @@ label {
     font-size: 1.1em;
     display: block;
     margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
 }
 textarea, input {
     width: 100%;

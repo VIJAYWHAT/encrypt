@@ -11,17 +11,17 @@
     <div class="container">
         <h1>Encryption</h1>
         <form id="encryptionForm">
-            <label for="plainText">Plain Text:</label>
+            <label for="plainText">Plain Text</label>
             <textarea id="plainText" placeholder="Enter plain text"></textarea>
 
-            <label for="secretKey">Secret Key:</label>
+            <label for="secretKey">Secret Key</label>
             <div class="textBox">
                 <input type="password" id="secretKey" placeholder="Enter secret key" autocomplete="off">
                 <span id="toggleSecretKey">🙈</span>
             </div>
             <button type="button" onclick="encryptText()">Encrypt</button>
         </form>
-        <h2>Encrypted Text:</h2>
+        <h2>Encrypted Text</h2>
         <div class="textBox">
             <input type="text" id="encryptedText" readonly>
             <span id="copyButton">📋</span>
